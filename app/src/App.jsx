@@ -1,24 +1,42 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import Login from "./components/Login";
-import Private from "./components/Private";
-import Dashboard from "./components/Dashboard";
+// src/App.jsx
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import { useState } from "react";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Login />} />
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-          <Route path="/user" element={<Private />}>
-            <Route path="dashboard" element={<Dashboard />} />
-          </Route>
-        </Routes>
-      </div>
-    </BrowserRouter>
+  return (
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isLoggedIn ? (
+              <Navigate to="/dashboard" />
+            ) : (
+              <Login setIsLoggedIn={setIsLoggedIn} />
+            )
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            isLoggedIn ? (
+              <Dashboard setIsLoggedIn={setIsLoggedIn} />
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
