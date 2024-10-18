@@ -1,0 +1,36 @@
+.main {
+  display: flex;
+}
+
+section {
+  height: 936px;
+  width: 240px;
+
+  padding-top: 20px;
+}
+
+.menu {
+  margin-left: 20px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.fa-border-all {
+  margin-right: 5px;
+}
+
+.content {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.upperNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name p {
+  margin-left: 10px;
+}

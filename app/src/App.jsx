@@ -1,43 +1,12 @@
-// src/App.jsx
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import { useState } from "react";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            isLoggedIn ? (
-              <Navigate to="/dashboard" />
-            ) : (
-              <Login setIsLoggedIn={setIsLoggedIn} />
-            )
-          }
-        />
-        <Route
-          path="/dashboard"
-          element={
-            isLoggedIn ? (
-              <Dashboard setIsLoggedIn={setIsLoggedIn} />
-            ) : (
-              <Navigate to="/" />
-            )
-          }
-        />
-      </Routes>
-    </Router>
+    <div>
+      <Navbar></Navbar>
+      <hr />
+      <Sidebar></Sidebar>
+    </div>
   );
 }
-
-export default App;

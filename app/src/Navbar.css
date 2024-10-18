@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+}
+
+.logo {
+  margin-top: 19px;
+  margin-left: 29px;
+  font-size: 38px;
+  font-weight: 700;
+  color: #6941c6;
+}
+
+.nav-profile {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  margin-right: 20px;
+  padding: 10px;
+  width: 140px;
+}
+
+/* .nav-profile p {
+  margin-top: 2px;
+} */
+
+.fa-bell {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.profile-img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
