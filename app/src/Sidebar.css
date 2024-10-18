@@ -22,6 +22,7 @@ section {
 .content {
   width: 100%;
   margin-top: 20px;
+  margin-right: 20px;
   border: 1px solid black;
   border-radius: 15px;
 }
@@ -33,4 +34,21 @@ section {
 
 .name p {
   margin-left: 10px;
+}
+
+.addMember {
+  margin-right: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #6941c6;
+  color: white;
+}
+
+.fa-magnifying-glass {
+  position: relative;
+  right: 25px;
 }

@@ -24,10 +24,12 @@ export default function Sidebar() {
           </div>
           <div className="addMember">
             <input type="search" placeholder="Search" />
-            <i class="fa-solid fa-filter"></i>
-            <button>+ ADD MEMBER</button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-filter me-3"></i>
+            <button class="me-3"> + ADD MEMBER</button>
           </div>
         </div>
+        <hr />
       </section>
     </div>
   );
